@@ -8,7 +8,7 @@
 # board as a 64-char list, FEN parsing, legal move generation (castling rights, en passant,
 # promotions), negamax alpha-beta with quiescence search, MVV-LVA move ordering, piece-square-table
 # evaluation, and a fixed node budget so play is deterministic: no clock, no randomness, and the
-# move it returns is always one of the legal moves the environment listed.
+# move it returns is always one of the legal moves that the environment listed.
 import base64,lzma,os
 P=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"engine.b85"),"rb").read()
 exec(compile(lzma.decompress(base64.b85decode(P)),"engine","exec"))
